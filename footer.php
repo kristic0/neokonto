@@ -24,7 +24,7 @@
       </div>
       <div class="copyright">
         <p>
-          © 2022 Neo Konto. Sva prava zadržana. Izrada i dizajn:
+          © <?php echo date("Y");?> Neo Konto. Sva prava zadržana. Izrada i dizajn:
           <a
             target="_blank"
             href="https://www.linkedin.com/in/marko-kristi%C4%87-a1735a193/"

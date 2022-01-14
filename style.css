@@ -153,6 +153,9 @@ p {
   max-width: 470px;
 }
 
+.lp-services-container {
+  margin-bottom: 100px;
+}
 .lp-services-container .lp-services {
   margin-top: 100px;
   display: grid;
@@ -236,13 +239,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px;
+  margin: 35px 0 60px 0;
 }
 .services .service-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  background-color: var(--secondary-color);
   border-radius: 11px;
   margin-bottom: 120px;
 }
@@ -258,11 +260,13 @@ p {
   position: relative;
 }
 .services .service-item .service-item-text {
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 10px 0;
+  border-radius: 0 10px 10px 0;
 }
 .services .service-item .service-item-text h3,
 .services .service-item .service-item-text p {
@@ -280,6 +284,9 @@ p {
 }
 .services .service-item-reversed {
   direction: rtl;
+}
+.services .service-item-reversed .service-item-text {
+  border-radius: 10px 0 0 10px;
 }
 .services .service-item-reversed .service-item-img {
   position: relative;
@@ -414,7 +421,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    height: 99%;
+    height: 100%;
     background: var(--secondary-color);
     opacity: 0.15;
     z-index: 2;
@@ -505,6 +512,7 @@ p {
   }
   .services .service-item .service-item-text {
     padding: 0 5px;
+    border-radius: 0 0 10px 10px;
   }
   .services .service-item .service-item-img img {
     border-radius: 10px 10px 0 0;
@@ -540,4 +548,4 @@ p {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */

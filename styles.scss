@@ -172,6 +172,7 @@ p {
 }
 
 .lp-services-container {
+  margin-bottom: 100px;
   .lp-services {
     margin-top: 100px;
     display: grid;
@@ -269,14 +270,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px;
+    margin: 35px 0 60px 0;
   }
 
   .service-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    background-color: var(--secondary-color);
     border-radius: 11px;
     margin-bottom: 120px;
 
@@ -293,11 +293,13 @@ p {
     }
 
     .service-item-text {
+      background-color: var(--secondary-color);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       padding: 10px 0;
+      border-radius: 0 10px 10px 0;
 
       h3,
       p {
@@ -320,6 +322,10 @@ p {
 
   .service-item-reversed {
     direction: rtl;
+
+    .service-item-text {
+      border-radius: 10px 0 0 10px;
+    }
 
     .service-item-img {
       position: relative;
@@ -478,7 +484,7 @@ p {
           top: 0;
           left: 0;
           width: 100%;
-          height: 99%;
+          height: 100%;
           background: var(--secondary-color);
           opacity: 0.15;
           z-index: 2;
@@ -590,6 +596,7 @@ p {
 
       .service-item-text {
         padding: 0 5px;
+        border-radius: 0 0 10px 10px;
       }
 
       .service-item-img {
