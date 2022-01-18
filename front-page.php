@@ -12,6 +12,8 @@
   <body>    
     <?php include 'landing-container.php';?>
     <?php include 'lp-services.php';?>
+    <?php include 'calculator.php'?>
+    <?php include 'banner.php';?>
     <?php include 'footer.php';?>
   </body>
 </html>

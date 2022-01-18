@@ -16,7 +16,7 @@ body {
   font-family: "Sora", sans-serif;
   min-height: 100vh;
   width: 100%;
-  max-width: calc(100vw - 17px);
+  max-width: 100vw;
 }
 
 html {
@@ -52,6 +52,42 @@ p {
   border-radius: var(--button-radius);
   transition: 0.2s ease-in-out;
   color: var(--tertiary-color);
+}
+
+.contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  h1 {
+    color: var(--secondary-color);
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .wpforms-container {
+      width: 100%;
+      .wpforms-form {
+        #wpforms-submit-12 {
+          border-radius: var(--button-radius);
+          transition: 0.2s ease-in-out;
+          color: var(--tertiary-color);
+          background-color: var(--secondary-color);
+          font-weight: 600;
+          border-style: none;
+          padding: 15px;
+        }
+
+        .wpforms-field-container {
+          .wpforms-field {
+            max-width: 500px;
+            color: var(--secondary-color);
+          }
+        }
+      }
+    }
+  }
 }
 
 .landing-container {
@@ -417,6 +453,110 @@ p {
   }
 }
 
+.kalkulator {
+  margin: 0 220px 100px 220px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  text-align: center;
+  .collapsible {
+    background-color: #3a3a3a;
+    cursor: pointer;
+    color: var(--secondary-color);
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    text-align: center;
+
+    &:hover {
+      transition: 0.2s ease-in-out;
+      background-color: var(--tertiary-color);
+    }
+  }
+
+  .active {
+    background-color: var(--tertiary-color);
+    transition: max-height 0.6s ease-in-out;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .content {
+    padding: 0;
+    background-color: var(--tertiary-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+
+    .field {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+      p {
+        max-width: fit-content;
+      }
+
+      input {
+        color: white;
+        margin-left: 10px;
+        min-height: 24px;
+        border: none;
+        background-color: #646464;
+        border-radius: 4px;
+        font-size: 16px;
+        -webkit-appearance: none;
+        outline: none;
+        &:active,
+        :focus-visible {
+          outline: none;
+        }
+      }
+
+      .btn {
+        background-color: var(--secondary-color);
+        border-radius: 4px;
+        border-style: none;
+        min-height: 26px;
+        height: 26px;
+        min-width: 199px;
+        color: var(--tertiary-color);
+        font-weight: 500;
+        font-family: inherit;
+        transition: 0.1s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          transition: 0.1s ease-in-out;
+          box-shadow: var(--secondary-color) 0px 0px 5px;
+        }
+      }
+    }
+  }
+}
+
+.kontakt-footer {
+  .footer {
+    .footer-info {
+      padding: 50px 120px 50px 120px;
+      height: 200px;
+
+      .footer-info-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1700px) {
   .pad {
     padding: 0 200px;
@@ -445,6 +585,10 @@ p {
     padding: 0 80px;
   }
 
+  .kalkulator {
+    margin: 0 120px;
+  }
+
   .contact-button {
     display: flex;
     background-color: var(--secondary-color);
@@ -455,6 +599,13 @@ p {
     border-radius: var(--button-radius);
     transition: 0.2s ease-in-out;
     color: var(--tertiary-color);
+  }
+
+  .contact {
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   }
 
   .landing-container {
@@ -512,6 +663,11 @@ p {
   .pad {
     padding: 0 20px;
   }
+
+  .kalkulator {
+    margin: 0px;
+  }
+
   .landing-container {
     .navigation {
       display: grid;
@@ -532,12 +688,7 @@ p {
       align-items: center;
 
       .about-us-img {
-        margin-top: 45px;
-        height: 320px;
-
-        img {
-          height: 320px;
-        }
+        display: none;
       }
 
       section {
@@ -589,6 +740,12 @@ p {
   .services {
     text-align: center;
 
+    .services-header {
+      h2 {
+        margin-top: 0;
+      }
+    }
+
     .service-item {
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
@@ -608,6 +765,10 @@ p {
         }
       }
     }
+
+    .service-item-reversed {
+      direction: unset;
+    }
   }
 
   .banner {
@@ -622,6 +783,15 @@ p {
       p {
         margin: 0 0 30px 0;
         font-size: 22px;
+      }
+    }
+  }
+
+  .kontakt-footer {
+    .footer {
+      .footer-info {
+        height: 360px;
+        padding: 50px 20px 20px 20px;
       }
     }
   }
@@ -641,7 +811,17 @@ p {
     }
 
     .copyright {
+      text-align: center;
       padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
+}
+
+.wpforms-confirmation-container-full {
+  background: var(--main-color) !important;
+  border: none;
+  margin: 0;
+  padding: 0;
 }

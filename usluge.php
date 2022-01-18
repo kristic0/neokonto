@@ -19,6 +19,7 @@ Template Name: Usluge page
     <?php include 'nav.php';?>
     </div>
     <?php include 'services.php';?>
+    <?php include 'banner.php';?>
     <?php include 'footer.php';?>
   </body>
 </html>
