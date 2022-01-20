@@ -71,52 +71,72 @@
 
 
     <div>
-    <button type="button" class="collapsible">Zarada</button>
-    <div class="content">
-        <script type="text/javascript" src=" <?php echo get_stylesheet_directory_uri()."/calc/zarada.js"?>"></script>
-            
-       
-        <div class="field">
-            <p>Unesite željenu neto zaradu:</p>
-            <input type="text" id="zarada-input">
-        </div>
+        <button type="button" class="collapsible">Zarada</button>
+        <div class="content">
+            <div class="field">
+                <p>Neto zarada:</p>
+                <input id="netoZarada" class="calculator-input" placeholder="0" type="text" autocomplete="off">
+            </div>
 
-        <div class="field">
-            <p></p>
-            <input type="button" class="btn" value="Izračunaj" onclick="calcZarada()">
-        </div>
+            <div class="field">
+                <p>Porez:</p>
+                <input id="porez" class="calculator-input-readonly" placeholder="0" type="text" readonly=""> 
+            </div>
 
-        <div class="field">
-        <p>Bruto:</p> <input type="text" id="zarada-res1" >
+
+            <div class="field">
+                <p>Doprinos za PIO (zaposlenog): </p>    
+                <input id="doprinosZaPio1" class="calculator-input-readonly" placeholder="0" type="text" readonly="">
+            </div>
+
+
+            <div class="field">
+                <p>Doprinos za zdravstvo:</p>    
+                <input id="doprinosZaZdravstvo1" class="calculator-input-readonly" placeholder="0" type="text" readonly="">
+            </div>
+
+
+            <div class="field">
+                <p>Doprinos za nezaposlenost:</p>
+                <input id="doprinosZaNezaposlenost" class="calculator-input-readonly" placeholder="0" type="text" readonly="">
+            </div>
+
+            <div class="field">
+                <p>Porezi i doprinosi iz zarada:</p>
+                <input id="poreziDoprinosi" class="calculator-input-readonly" placeholder="0" type="text" readonly="">
+            </div>
+
+            <div class="field">
+                <p class="blue-description">Bruto zarada:</p>
+                <input id="bruto1" class="calculator-input" placeholder="0" type="text" autocomplete="off"> 
+            </div>
+
+
+            <div class="field">
+                <p>Doprinos za PIO (poslodavca):</p>
+                <input id="doprinosZaPio2" class="calculator-input-readonly" placeholder="0" type="text" readonly="">
+            </div>
+
+
+            <div class="field">
+                <p>Doprinos za zdravstvo:</p>    
+                <input id="doprinosZaZdravstvo2" class="calculator-input-readonly" placeholder="0" type="text" readonly="">
+            </div>
+
+
+            <div class="field">
+                <p>Doprinosi na zarade:</p>
+                <input id="doprinosiNaZarade" class="calculator-input-readonly" placeholder="0" type="text" readonly="">  
+            </div>
+
+            <div class="field">
+                <p class="blue-description">Ukupno za plaćanje:</p>     
+                <input id="bruto2" class="calculator-input" placeholder="0" type="text" autocomplete="off">
+            </div>
+        
+
+            <script type="text/javascript" src=" <?php echo get_stylesheet_directory_uri()."/calc/zarada.js"?>"></script>
         </div>
-        <div class="field">
-        <p>Oporezivo:</p> <input type="text" id="zarada-res2"> 
-        </div>
-        <div class="field">
-        <p>Porez:</p> <input type="text" id="zarada-res3" >
-        </div>
-        <div class="field">
-        <p>Pio na teret zaposlenog:</p> <input type="text" id="zarada-res4" >
-        </div>
-        <div class="field">
-        <p>Zdravstveno na teret zaposlenog:</p> <input type="text" id="zarada-res5" >
-        </div>
-        <div class="field">
-        <p>Nezapslenost na teret zaposlenog:</p> <input type="text" id="zarada-res6" >
-        </div>
-        <div class="field">
-        <p>Pio na teret poslodavca:</p> <input type="text" id="zarada-res7" >
-        </div>
-        <div class="field">
-        <p>Zdravstveno ne teret poslodavca:</p> <input type="text" id="zarada-res8" >
-        </div>
-        <div class="field">
-        <p>Nezaposlenost ne teret poslodavca:</p> <input type="text" id="zarada-res9" >
-        </div>
-        <div class="field">
-        <p>Ukupan trosak:</p> <input type="text" id="zarada-res10" >
-        </div>
-    </div>
     </div>
 
 
